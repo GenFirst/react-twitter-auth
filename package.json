@@ -1,0 +1,49 @@
+{
+  "name": "react-twitter-login",
+  "version": "0.0.1",
+  "description": "A Twitter loging component",
+  "scripts": {
+    "build:develop": "cross-env NODE_ENV=development webpack src/index.js bin/react-twitter-login-component.js",
+    "build:production": "cross-env NODE_ENV=production webpack src/index.js bin/react-twitter-login-component.min.js",
+    "lint": "eslint src/ --fix",
+    "clean": "rm -rf node_modules && rm -rf bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GenFirst/react-twitter-login.git"
+  },
+  "keywords": [
+    "React",
+    "Twitter",
+    "Login",
+    "Auth",
+    "oauth",
+    "component"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GenFirst/react-twitter-login/issues"
+  },
+  "peerDependencies": {
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.1.2",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-1": "6.24.1",
+    "cross-env": "5.0.5",
+    "eslint": "4.5.0",
+    "eslint-config-airbnb": "15.1.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.3.0",
+    "react": "^15.5.4",
+    "webpack": "3.5.5"
+  }
+}
