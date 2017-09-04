@@ -2,3 +2,5 @@ lib/**
 node_modules/**
 .idea/**
 package-lock.json
+
+example/backend/node_modules/**

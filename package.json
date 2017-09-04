@@ -47,5 +47,9 @@
     "eslint-plugin-react": "7.3.0",
     "react": "^15.5.4",
     "webpack": "3.5.5"
+  },
+  "dependencies": {
+    "url-search-params-polyfill": "^2.0.0",
+    "whatwg-fetch": "2.0.3"
   }
 }
