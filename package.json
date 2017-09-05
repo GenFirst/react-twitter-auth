@@ -1,5 +1,5 @@
 {
-  "name": "react-twitter-login",
+  "name": "react-twitter-auth",
   "version": "0.0.1",
   "description": "A Twitter loging component",
   "scripts": {
