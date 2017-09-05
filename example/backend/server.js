@@ -145,7 +145,7 @@ var getCurrentUser = function(req, res, next) {
 var getOne = function (req, res) {
   var user = req.user.toObject();
 
-  delete user['bitbucketProvider'];
+  delete user['twitterProvider'];
   delete user['__v'];
 
   res.json(user);
