@@ -32,8 +32,8 @@ class TwitterLogin extends Component {
   }
 
   openPopup(token) {
-    const w = 450;
-    const h = 300;
+    const w = this.props.dialogWidth;
+    const h = this.props.dialogHeight;
     const left = (screen.width/2)-(w/2);
     const top = (screen.height/2)-(h/2);
     const popup = window.open(`https://api.twitter.com/oauth/authenticate?oauth_token=${token}`, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
@@ -93,7 +93,10 @@ class TwitterLogin extends Component {
   render() {
     const twitterButton = React.createElement(
       this.props.tag, {
-        onClick: this.onButtonClick
+        onClick: this.onButtonClick,
+        style: this.props.style,
+        disabled: this.props.disabled,
+        className: this.props,className,
       }, this.props.children ? this.props.children : this.props.text
     );
     return twitterButton;
@@ -106,12 +109,20 @@ TwitterLogin.propTypes = {
   loginUrl: PropTypes.string.isRequired,
   requestTokenUrl: PropTypes.string.isRequired,
   onFailure: PropTypes.func.isRequired,
-  onSuccess: PropTypes.func.isRequired
+  onSuccess: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+  style: PropTypes.object,
+  className: PropTypes.string,
+  dialogWidth: PropTypes.number,
+  dialogHeight: PropTypes.number
 };
 
 TwitterLogin.defaultProps = {
   tag: 'button',
-  text: 'Sign up with Twitter'
+  text: 'Sign up with Twitter',
+  disabled: false,
+  dialogWidth: 600,
+  dialogHeight: 400
 };
 
 export default TwitterLogin;
