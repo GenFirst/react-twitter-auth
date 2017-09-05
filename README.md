@@ -1,8 +1,11 @@
-# React Twitter Login
+[![NPM](https://nodei.co/npm/react-twitter-auth.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-twitter-auth/)
+[![Code Climate](https://codeclimate.com/github/GenFirst/react-twitter-login/badges/gpa.svg)](https://codeclimate.com/github/GenFirst/react-twitter-login)
+[![npm version](https://badge.fury.io/js/react-twitter-auth.svg)](https://badge.fury.io/js/react-twitter-auth)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+# React Twitter Authentication Component
 
 > A React Twitter oAUth Sign-in / Log-in Component for React
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Installation
 
@@ -35,4 +38,4 @@ Full example can be found in [example](https://github.com/GenFirst/react-twitter
 
 # License
 
-passport-bitbucket-token is released under [MIT License](https://opensource.org/licenses/MIT).
+react-twitter-auth is released under [MIT License](https://opensource.org/licenses/MIT).
