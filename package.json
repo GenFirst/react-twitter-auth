@@ -3,15 +3,15 @@
   "version": "0.0.1",
   "description": "A Twitter loging component",
   "scripts": {
-    "build:develop": "cross-env NODE_ENV=development webpack src/index.js lib/react-twitter-login-component.js",
-    "build:production": "cross-env NODE_ENV=production webpack src/index.js lib/react-twitter-login-component.min.js",
+    "build:develop": "cross-env NODE_ENV=development webpack src/index.js lib/react-twitter-auth-component.js",
+    "build:production": "cross-env NODE_ENV=production webpack src/index.js lib/react-twitter-auth-component.min.js",
     "lint": "eslint src/ --fix",
     "clean": "rm -rf node_modules && rm -rf bin"
   },
-  "main": "lib/react-twitter-login-component.js",
+  "main": "lib/react-twitter-auth-component.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GenFirst/react-twitter-login.git"
+    "url": "git+https://github.com/GenFirst/react-twitter-auth.git"
   },
   "keywords": [
     "React",

@@ -96,7 +96,7 @@ class TwitterLogin extends Component {
         onClick: this.onButtonClick,
         style: this.props.style,
         disabled: this.props.disabled,
-        className: this.props,className,
+        className: this.props.className,
       }, this.props.children ? this.props.children : this.props.text
     );
     return twitterButton;
