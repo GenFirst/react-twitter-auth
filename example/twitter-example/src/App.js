@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TwitterLogin from 'react-twitter-auth/lib/react-twitter-login-component.js';
+import TwitterLogin from 'react-twitter-auth/lib/react-twitter-auth-component.js';
 
 class App extends Component {
 

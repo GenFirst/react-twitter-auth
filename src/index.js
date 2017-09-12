@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import 'whatwg-fetch'
 import 'url-search-params-polyfill';
+import  TwitterIcon from 'react-icons/lib/fa/twitter';
 
 
 class TwitterLogin extends Component {
@@ -90,6 +91,14 @@ class TwitterLogin extends Component {
     });
   }
 
+  getDefaultButtonContent() {
+    return (
+      <span>
+        <TwitterIcon color='#00aced' size={25}/> {this.props.text}
+      </span>
+    );
+  }
+
   render() {
     const twitterButton = React.createElement(
       this.props.tag, {
@@ -97,7 +106,7 @@ class TwitterLogin extends Component {
         style: this.props.style,
         disabled: this.props.disabled,
         className: this.props.className,
-      }, this.props.children ? this.props.children : this.props.text
+      }, this.props.children ? this.props.children : this.getDefaultButtonContent()
     );
     return twitterButton;
   }
@@ -119,7 +128,7 @@ TwitterLogin.propTypes = {
 
 TwitterLogin.defaultProps = {
   tag: 'button',
-  text: 'Sign up with Twitter',
+  text: 'Sign in with Twitter',
   disabled: false,
   dialogWidth: 600,
   dialogHeight: 400

@@ -49,6 +49,7 @@
     "webpack": "3.5.5"
   },
   "dependencies": {
+    "react-icons": "^2.2.5",
     "url-search-params-polyfill": "^2.0.0",
     "whatwg-fetch": "2.0.3"
   }
