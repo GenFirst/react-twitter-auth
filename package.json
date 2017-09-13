@@ -6,7 +6,9 @@
     "build:develop": "cross-env NODE_ENV=development webpack src/index.js lib/react-twitter-auth-component.js",
     "build:production": "cross-env NODE_ENV=production webpack src/index.js lib/react-twitter-auth-component.min.js",
     "lint": "eslint src/ --fix",
-    "clean": "rm -rf node_modules && rm -rf bin"
+    "clean": "rm -rf node_modules && rm -rf bin",
+    "test": "",
+    "coveralls": ""
   },
   "main": "lib/react-twitter-auth-component.js",
   "repository": {
