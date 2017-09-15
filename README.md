@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/GenFirst/react-twitter-auth.svg?branch=master)](https://travis-ci.org/GenFirst/react-twitter-auth)
 [![Code Climate](https://codeclimate.com/github/GenFirst/react-twitter-login/badges/gpa.svg)](https://codeclimate.com/github/GenFirst/react-twitter-login)
 [![Dependency Status](https://gemnasium.com/badges/github.com/GenFirst/react-twitter-auth.svg)](https://gemnasium.com/github.com/GenFirst/react-twitter-auth)
+[![Coverage Status](https://coveralls.io/repos/github/GenFirst/react-twitter-auth/badge.svg?branch=master)](https://coveralls.io/github/GenFirst/react-twitter-auth?branch=master)
 [![npm version](https://badge.fury.io/js/react-twitter-auth.svg)](https://badge.fury.io/js/react-twitter-auth)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
