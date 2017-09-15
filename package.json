@@ -7,7 +7,7 @@
     "build:production": "cross-env NODE_ENV=production webpack src/index.js lib/react-twitter-auth-component.min.js",
     "lint": "eslint src/ --fix",
     "clean": "rm -rf node_modules && rm -rf bin",
-    "test": "",
+    "test": "jest --config jest.config.json",
     "coveralls": ""
   },
   "main": "lib/react-twitter-auth-component.js",
@@ -36,6 +36,7 @@
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
+    "babel-jest": "^21.0.2",
     "babel-loader": "7.1.2",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
@@ -47,8 +48,10 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
     "eslint-plugin-react": "7.3.0",
+    "jest": "^21.1.0",
     "react": "^15.5.4",
-    "webpack": "3.5.5"
+    "webpack": "3.5.5",
+    "react-dom": "^15.5.0"
   },
   "dependencies": {
     "react-icons": "^2.2.5",

@@ -1,0 +1,8 @@
+
+{
+  "moduleFileExtensions":[ "js", "jsx"],
+  "moduleNameMapper" :
+  {
+    "TwitterLogin": "<rootDir>/src/index.js"
+  }
+}

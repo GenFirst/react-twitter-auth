@@ -6,6 +6,7 @@ cache:
 notifications:
   email: true
 node_js:
+  - 8
   - 7
   - 6
   - 5
@@ -17,4 +18,4 @@ before_script:
 script:
   - npm run test
 after_success:
-- npm run coveralls
+  - npm run coveralls
