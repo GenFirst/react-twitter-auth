@@ -49,25 +49,32 @@ class TwitterLogin extends Component {
         this.props.onFailure(new Error('Popup has been closed by user'));
       }
 
+      const closeDialog = () => {
+        clearInterval(polling);
+        popup.close();
+      };
+
       try {
-        if (!popup.location.hostname.includes('api.twitter.com')) {
+        if (!popup.location.hostname.includes('api.twitter.com') &&
+              !popup.location.hostname == '') {
           if (popup.location.search) {
             const query = new URLSearchParams(popup.location.search);
 
             const oauthToken = query.get('oauth_token');
             const oauthVerifier = query.get('oauth_verifier');
 
-            this.getOathToken(oauthVerifier, oauthToken);
+            closeDialog();
+            return this.getOathToken(oauthVerifier, oauthToken);
           } else {
-            this.props.onFailure(new Error(
+            closeDialog();
+            return this.props.onFailure(new Error(
               'OAuth redirect has occurred but no query or hash parameters were found. ' +
               'They were either not set during the redirect, or were removed—typically by a ' +
               'routing library—before Twitter react component could read it.'
             ));
           }
 
-          clearInterval(polling);
-          popup.close();
+
         }
       } catch (error) {
         // Ignore DOMException: Blocked a frame with origin from accessing a cross-origin frame.
