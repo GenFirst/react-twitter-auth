@@ -10,8 +10,10 @@ class App extends Component {
     this.onSuccess = this.onSuccess.bind(this);
   }
 
-  onSuccess(body) {
-    alert(JSON.stringify(body));
+  onSuccess(response) {
+    response.json().then(body => {
+      alert(JSON.stringify(body));
+    });
   }
 
   onFailed(error) {
