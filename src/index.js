@@ -97,9 +97,11 @@ class TwitterLogin extends Component {
   }
 
   getDefaultButtonContent() {
+    const defaultIcon = this.props.showIcon? <TwitterIcon color='#00aced' size={25}/> : null;
+
     return (
       <span>
-        <TwitterIcon color='#00aced' size={25}/> {this.props.text}
+        {defaultIcon} {this.props.text}
       </span>
     );
   }
@@ -128,7 +130,8 @@ TwitterLogin.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   dialogWidth: PropTypes.number,
-  dialogHeight: PropTypes.number
+  dialogHeight: PropTypes.number,
+  showIcon: PropTypes.bool
 };
 
 TwitterLogin.defaultProps = {
@@ -136,7 +139,8 @@ TwitterLogin.defaultProps = {
   text: 'Sign in with Twitter',
   disabled: false,
   dialogWidth: 600,
-  dialogHeight: 400
+  dialogHeight: 400,
+  showIcon: true
 };
 
 export default TwitterLogin;

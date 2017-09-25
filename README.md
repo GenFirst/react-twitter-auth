@@ -37,11 +37,19 @@
 | className       |string  |                     |class name for component                                                       |
 | dialogWidth     |number  |600                  |dialog width                                                                   |
 | dialogHeight    |number  |400                  |dialog height                                                                  |
-
+| showIcon        |bool    |true                 |should default icon be visible                                                 |
 
 # Examples
 
 Full example can be found in [example](https://github.com/GenFirst/react-twitter-login/tree/master/example) folder.
+
+You can find tutorial that explains in details how to implement Twitter authentication with RESTful backend [here](https://medium.com/@robince885/how-to-do-twitter-authentication-with-react-and-restful-api-e525f30c62bb).
+
+# Workflow
+
+The detailed explanation of the whole process can be found in Twitter documentation. In picture below you can find out all the steps that are needed.
+
+![Twitter authentication workflow](https://cdn-images-1.medium.com/max/800/1*RTsSRbVeEzPaC68hRT8n2g.png)
 
 # License
 

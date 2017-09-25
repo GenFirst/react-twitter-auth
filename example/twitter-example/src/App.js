@@ -23,7 +23,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <TwitterLogin loginUrl="http://localhost:4000/api/v1/auth/twitter" onFailure={this.onFailed} onSuccess={this.onSuccess} requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"/>
+        <TwitterLogin loginUrl="http://localhost:4000/api/v1/auth/twitter"
+                      onFailure={this.onFailed}
+                      onSuccess={this.onSuccess}
+                      requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
+                      showIcon={true}/>
       </div>
     );
   }
