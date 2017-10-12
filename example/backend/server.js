@@ -94,7 +94,7 @@ router.route('/auth/twitter')
       form: { oauth_verifier: req.query.oauth_verifier }
     }, function (err, r, body) {
       if (err) {
-        return res.send(500, { message: e.message });
+        return res.send(500, { message: err.message });
       }
 
       console.log(body);
