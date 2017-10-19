@@ -18,28 +18,32 @@ class TwitterLogin extends Component {
   }
 
   getRequestToken() {
+    var popup = this.openPopup();
+
     return window.fetch(this.props.requestTokenUrl, {
       method: 'POST',
+      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       }
     }).then(response => {
       return response.json();
     }).then(data => {
-      this.openPopup(data.oauth_token);
+      popup.location = `https://api.twitter.com/oauth/authenticate?oauth_token=${data.oauth_token}`;
+      this.polling(popup);
     }).catch(error => {
+      popup.close();
       return this.props.onFailure(error);
     });
   }
 
-  openPopup(token) {
+  openPopup() {
     const w = this.props.dialogWidth;
     const h = this.props.dialogHeight;
     const left = (screen.width/2)-(w/2);
     const top = (screen.height/2)-(h/2);
-    const popup = window.open(`https://api.twitter.com/oauth/authenticate?oauth_token=${token}`, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 
-    this.polling(popup);
+    return window.open('', '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
   }
 
   polling(popup) {
@@ -86,6 +90,7 @@ class TwitterLogin extends Component {
   getOathToken(oAuthVerifier, oauthToken) {
     return window.fetch(`${this.props.loginUrl}?oauth_verifier=${oAuthVerifier}&oauth_token=${oauthToken}`, {
       method: 'POST',
+      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       }
