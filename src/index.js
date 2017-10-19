@@ -28,7 +28,7 @@ class TwitterLogin extends Component {
     }).then(response => {
       return response.json();
     }).then(data => {
-      popup.location = 'https://api.twitter.com/oauth/authenticate?oauth_token=' + data.oauth_token;
+      popup.location = `https://api.twitter.com/oauth/authenticate?oauth_token=${data.oauth_token}`;
       this.polling(popup);
     }).catch(error => {
       popup.close();
