@@ -22,6 +22,7 @@ class TwitterLogin extends Component {
 
     return window.fetch(this.props.requestTokenUrl, {
       method: 'POST',
+      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       }
@@ -89,6 +90,7 @@ class TwitterLogin extends Component {
   getOathToken(oAuthVerifier, oauthToken) {
     return window.fetch(`${this.props.loginUrl}?oauth_verifier=${oAuthVerifier}&oauth_token=${oauthToken}`, {
       method: 'POST',
+      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       }
