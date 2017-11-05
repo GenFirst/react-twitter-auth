@@ -38,6 +38,7 @@
 | dialogWidth     |number  |600                  |dialog width                                                                   |
 | dialogHeight    |number  |400                  |dialog height                                                                  |
 | showIcon        |bool    |true                 |should default icon be visible                                                 |
+| credentials     |string  |same-origin          |indicates whether the user agent should send cookies from the other domain in the case of cross-origin requests. Possible values: `omit`, `same-origin`, `include`|
 
 # Examples
 

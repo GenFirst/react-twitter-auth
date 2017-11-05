@@ -22,7 +22,7 @@ class TwitterLogin extends Component {
 
     return window.fetch(this.props.requestTokenUrl, {
       method: 'POST',
-      credentials: 'same-origin',
+      credentials: this.props.credentials,
       headers: {
         'Content-Type': 'application/json'
       }
@@ -90,7 +90,7 @@ class TwitterLogin extends Component {
   getOathToken(oAuthVerifier, oauthToken) {
     return window.fetch(`${this.props.loginUrl}?oauth_verifier=${oAuthVerifier}&oauth_token=${oauthToken}`, {
       method: 'POST',
-      credentials: 'same-origin',
+      credentials: this.props.credentials,
       headers: {
         'Content-Type': 'application/json'
       }
@@ -136,7 +136,8 @@ TwitterLogin.propTypes = {
   className: PropTypes.string,
   dialogWidth: PropTypes.number,
   dialogHeight: PropTypes.number,
-  showIcon: PropTypes.bool
+  showIcon: PropTypes.bool,
+  credentials: PropTypes.oneOf(['omit', 'same-origin', 'include']),
 };
 
 TwitterLogin.defaultProps = {
@@ -145,7 +146,8 @@ TwitterLogin.defaultProps = {
   disabled: false,
   dialogWidth: 600,
   dialogHeight: 400,
-  showIcon: true
+  showIcon: true,
+  credentials: 'same-origin'
 };
 
 export default TwitterLogin;
