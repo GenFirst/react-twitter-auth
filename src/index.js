@@ -68,7 +68,7 @@ class TwitterLogin extends Component {
             const oauthVerifier = query.get('oauth_verifier');
 
             closeDialog();
-            return this.getOathToken(oauthVerifier, oauthToken);
+            return this.getOuathToken(oauthVerifier, oauthToken);
           } else {
             closeDialog();
             return this.props.onFailure(new Error(
@@ -87,7 +87,7 @@ class TwitterLogin extends Component {
     }, 500);
   }
 
-  getOathToken(oAuthVerifier, oauthToken) {
+  getOauthToken(oAuthVerifier, oauthToken) {
     return window.fetch(`${this.props.loginUrl}?oauth_verifier=${oAuthVerifier}&oauth_token=${oauthToken}`, {
       method: 'POST',
       credentials: this.props.credentials,
