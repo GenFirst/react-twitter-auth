@@ -68,7 +68,7 @@ class TwitterLogin extends Component {
             const oauthVerifier = query.get('oauth_verifier');
 
             closeDialog();
-            return this.getOuathToken(oauthVerifier, oauthToken);
+            return this.getOauthToken(oauthVerifier, oauthToken);
           } else {
             closeDialog();
             return this.props.onFailure(new Error(
