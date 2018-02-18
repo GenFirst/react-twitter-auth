@@ -31,6 +31,15 @@ class App extends Component {
                       requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
                       showIcon={true}
                       customHeaders={customHeader}/>
+
+        <TwitterLogin loginUrl="http://localhost:4000/api/v1/auth/twitter"
+                      onFailure={this.onFailed}
+                      onSuccess={this.onSuccess}
+                      requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
+                      showIcon={true}
+                      customHeaders={customHeader}>
+          <b>Custom</b> Twitter <i>Login</i> content
+        </TwitterLogin>
       </div>
     );
   }

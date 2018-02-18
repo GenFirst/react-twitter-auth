@@ -22,6 +22,20 @@
               onFailure={this.onFailed} onSuccess={this.onSuccess} 
               requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"/>
 ```
+
+Custom content that overrides default content:
+
+```jsx harmony
+ <TwitterLogin loginUrl="http://localhost:4000/api/v1/auth/twitter"
+              onFailure={this.onFailed}
+              onSuccess={this.onSuccess}
+              requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
+              showIcon={true}
+              customHeaders={customHeader}>
+    <b>Custom</b> Twitter <i>Login</i> content
+</TwitterLogin>
+```
+
 ## Options
 
 | params          | value  | default value       | description                                                                   |
@@ -40,6 +54,8 @@
 | showIcon        |bool    |true                 |should default icon be visible                                                 |
 | credentials     |string  |same-origin          |indicates whether the user agent should send cookies from the other domain in the case of cross-origin requests. Possible values: `omit`, `same-origin`, `include`|
 | customHeaders   |object  |{}                   |custom headers should be object with fields that needs to be sent to user server. Field name will be used as header key and field value as header value. Because of bug in fetch implementation all keys will be lowercase.|
+| children        |node    |                     |this props can be used in order to override default component content|
+
 # Examples
 
 Full example can be found in [example](https://github.com/GenFirst/react-twitter-login/tree/master/example) folder.
