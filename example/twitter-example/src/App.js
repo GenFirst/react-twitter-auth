@@ -21,13 +21,16 @@ class App extends Component {
   }
 
   render() {
+    const customHeader = {};
+    customHeader['Test'] = 'test-header';
     return (
       <div>
         <TwitterLogin loginUrl="http://localhost:4000/api/v1/auth/twitter"
                       onFailure={this.onFailed}
                       onSuccess={this.onSuccess}
                       requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
-                      showIcon={true}/>
+                      showIcon={true}
+                      customHeaders={customHeader}/>
       </div>
     );
   }

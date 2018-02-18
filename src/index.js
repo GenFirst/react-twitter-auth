@@ -17,15 +17,19 @@ class TwitterLogin extends Component {
     return this.getRequestToken();
   }
 
+  getHeaders() {
+    const headers = Object.assign({}, this.props.customHeaders);
+    headers['Content-Type'] = 'application/json';
+    return headers;
+  }
+
   getRequestToken() {
     var popup = this.openPopup();
 
     return window.fetch(this.props.requestTokenUrl, {
       method: 'POST',
       credentials: this.props.credentials,
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      headers: this.getHeaders()
     }).then(response => {
       return response.json();
     }).then(data => {
@@ -91,9 +95,7 @@ class TwitterLogin extends Component {
     return window.fetch(`${this.props.loginUrl}?oauth_verifier=${oAuthVerifier}&oauth_token=${oauthToken}`, {
       method: 'POST',
       credentials: this.props.credentials,
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      headers: this.getHeaders()
     }).then(response => {
       this.props.onSuccess(response);
     }).catch(error => {
@@ -138,6 +140,7 @@ TwitterLogin.propTypes = {
   dialogHeight: PropTypes.number,
   showIcon: PropTypes.bool,
   credentials: PropTypes.oneOf(['omit', 'same-origin', 'include']),
+  customHeaders: PropTypes.object,
 };
 
 TwitterLogin.defaultProps = {
@@ -147,7 +150,8 @@ TwitterLogin.defaultProps = {
   dialogWidth: 600,
   dialogHeight: 400,
   showIcon: true,
-  credentials: 'same-origin'
+  credentials: 'same-origin',
+  customHeaders: {}
 };
 
 export default TwitterLogin;

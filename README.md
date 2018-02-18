@@ -39,7 +39,7 @@
 | dialogHeight    |number  |400                  |dialog height                                                                  |
 | showIcon        |bool    |true                 |should default icon be visible                                                 |
 | credentials     |string  |same-origin          |indicates whether the user agent should send cookies from the other domain in the case of cross-origin requests. Possible values: `omit`, `same-origin`, `include`|
-
+| customHeaders   |object  |{}                   |custom headers should be object with fields that needs to be sent to user server. Field name will be used as header key and field value as header value. Because of bug in fetch implementation all keys will be lowercase.|
 # Examples
 
 Full example can be found in [example](https://github.com/GenFirst/react-twitter-login/tree/master/example) folder.
