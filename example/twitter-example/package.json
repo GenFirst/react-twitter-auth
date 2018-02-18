@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-twitter-login": "file:../../",
-    "prop-types": "^15.5.10"
+    "react-twitter-auth": "file:../.."
   },
   "devDependencies": {
     "react-scripts": "1.0.13"

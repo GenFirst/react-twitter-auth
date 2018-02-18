@@ -97,7 +97,6 @@ router.route('/auth/twitter')
         return res.send(500, { message: err.message });
       }
 
-      console.log(body);
       const bodyString = '{ "' + body.replace(/&/g, '", "').replace(/=/g, '": "') + '"}';
       const parsedBody = JSON.parse(bodyString);
 
