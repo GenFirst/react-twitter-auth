@@ -73,7 +73,7 @@ router.route('/auth/twitter/reverse')
       }
     }, function (err, r, body) {
       if (err) {
-        return res.send(500, { message: e.message });
+        return res.send(500, { message: err.message });
       }
 
 
