@@ -33,7 +33,7 @@ class TwitterLogin extends Component {
     }).then(response => {
       return response.json();
     }).then(data => {
-      popup.location = `https://api.twitter.com/oauth/authenticate?oauth_token=${data.oauth_token}`;
+      popup.location = `https://api.twitter.com/oauth/authenticate?oauth_token=${data.oauth_token}&force_login=${this.props.forceLogin}`;
       this.polling(popup);
     }).catch(error => {
       popup.close();
@@ -141,6 +141,7 @@ TwitterLogin.propTypes = {
   showIcon: PropTypes.bool,
   credentials: PropTypes.oneOf(['omit', 'same-origin', 'include']),
   customHeaders: PropTypes.object,
+  forceLogin: PropTypes.bool
 };
 
 TwitterLogin.defaultProps = {
@@ -151,7 +152,8 @@ TwitterLogin.defaultProps = {
   dialogHeight: 400,
   showIcon: true,
   credentials: 'same-origin',
-  customHeaders: {}
+  customHeaders: {},
+  forceLogin: false
 };
 
 export default TwitterLogin;
