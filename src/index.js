@@ -13,7 +13,8 @@ class TwitterLogin extends Component {
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
-  onButtonClick() {
+  onButtonClick(e) {
+    e.preventDefault();
     return this.getRequestToken();
   }
 
