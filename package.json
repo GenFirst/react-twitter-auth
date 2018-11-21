@@ -28,8 +28,8 @@
     "url": "https://github.com/GenFirst/react-twitter-login/issues"
   },
   "peerDependencies": {
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "prop-types": "^15.5.0"
   },
   "devDependencies": {
