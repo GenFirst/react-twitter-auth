@@ -28,9 +28,9 @@
     "url": "https://github.com/GenFirst/react-twitter-login/issues"
   },
   "peerDependencies": {
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
-    "prop-types": "^15.5.0"
+    "react": "> 15.5.0 < 17",
+    "react-dom": "> 15.5.0 < 17",
+    "prop-types": "> 15.5.0 < 17"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
