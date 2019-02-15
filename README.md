@@ -61,7 +61,7 @@ Custom content that overrides default content:
 |  customHeaders  |  object  |          {}          | custom headers should be object with fields that needs to be sent to user server. Field name will be used as header key and field value as header value. Because of bug in fetch implementation all keys will be lowercase. |
 |    children     |   node   |                      |                                                                            this props can be used in order to override default component content                                                                            |
 |   forceLogin    |   bool   |        false         |                                                                                force user to authenticate with Twitter username and password                                                                                |
-|   screenName    |  string  |          ''          |                                                                       prefills the username input box of the OAuth login screen with the given value                                                                        |
+|   screenName    |  string  |                      |                                                                       prefills the username input box of the OAuth login screen with the given value                                                                        |
 
 # Examples
 
