@@ -4,19 +4,19 @@ import { expect } from 'chai';
 import { mount } from 'enzyme';
 
 describe('Twitter Login Component', () => {
-
   let component;
   let propsObj;
 
-  describe('With default props',() => {
+  describe('With default props', () => {
     beforeEach(() => {
       propsObj = {
-        onSuccess: (response) => {},
-        onFailure: (error) => {},
+        onClick: () => {},
+        onSuccess: response => {},
+        onFailure: error => {},
         loginUrl: 'http://localhost:3000/login-url',
         requestTokenUrl: 'http://localhost:3000/request-token'
       };
-      component = mount(<TwitterLogin {...propsObj}/>);
+      component = mount(<TwitterLogin {...propsObj} />);
     });
 
     it('shows the button', () => {
@@ -30,8 +30,5 @@ describe('Twitter Login Component', () => {
       expect(component.props().dialogWidth).to.equal(600);
       expect(component.props().dialogHeight).to.equal(400);
     });
-
-
-
-  })
+  });
 });

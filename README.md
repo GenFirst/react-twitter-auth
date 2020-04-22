@@ -19,10 +19,11 @@
 
 ```jsx harmony
 <TwitterLogin
-  loginUrl="http://localhost:4000/api/v1/auth/twitter"
+  loginUrl='http://localhost:4000/api/v1/auth/twitter'
+  onClick={this.setLoading}
   onFailure={this.onFailed}
   onSuccess={this.onSuccess}
-  requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
+  requestTokenUrl='http://localhost:4000/api/v1/auth/twitter/reverse'
 />
 ```
 
@@ -30,10 +31,11 @@ Custom content that overrides default content:
 
 ```jsx harmony
 <TwitterLogin
-  loginUrl="http://localhost:4000/api/v1/auth/twitter"
+  loginUrl='http://localhost:4000/api/v1/auth/twitter'
+  onClick={this.setLoading}
   onFailure={this.onFailed}
   onSuccess={this.onSuccess}
-  requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
+  requestTokenUrl='http://localhost:4000/api/v1/auth/twitter/reverse'
   showIcon={true}
   customHeaders={customHeader}
 >
@@ -49,6 +51,7 @@ Custom content that overrides default content:
 |      text       |  string  | Sign in with Twitter |                                                                                            text that will be shown in component                                                                                             |
 |    loginUrl     |  string  |                      |                                                                             URL that will be used to finish 3rd step of authentication process                                                                              |
 | requestTokenUrl |  string  |                      |                                                                                         URL that will be used to get request token                                                                                          |
+|     onClick     | function |                      |                                                                     function that will be called once the button is clicked before attempting to log in                                                                     |
 |    onFailure    | function |                      |                                                                                function that will be called if user cannot be authenticated                                                                                 |
 |    onSuccess    | function |                      |                                                                             function that will be called if user is successfully authenticated                                                                              |
 |    disabled     | boolean  |        false         |                                                                                                      disable component                                                                                                      |
