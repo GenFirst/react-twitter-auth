@@ -18,7 +18,7 @@ mongoose();
 var User = require('mongoose').model('User');
 var passportConfig = require('./passport');
 
-//setup configuration for facebook login
+//setup configuration for twitter login
 passportConfig();
 
 var app = express();
